@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Mauro Kart</title>
-		<script src="WorldViewProjection.js"></script>
+		<script src="lib/WorldViewProjection.js"></script>
         <script src="lib/model.js"></script>
         <script src="lib/texture.js"></script>
         <script src="lib/webgl-obj-loader.min.js"></script>
@@ -15,24 +15,34 @@
 		<canvas id="my-canvas" width='800' height='450' style="background-color: white;">
 			Your browser doesn't support the Canvas Element!
 		</canvas>
-				<canvas id="msg" width='400' height='200' style="background-color: white;">
-			Your browser doesn't support the Canvas Element!
-		</canvas>
-		<center>
-			<h1>Use the following keys to move the car</h1>
-			<table border="1">
-			  <tr>
-				<td>&nbsp;</td>
-				<td>Forward: <B>Up</B> Arrow</td>
-				<td>&nbsp;</td>
-			  </tr>
-			  <tr>
-				<td>Turn left: <B>Left</B> Arrow</td>
-				<td>Reverse: <B>Down</B> Arrow</td>
-				<td>turn right: <B>Right</B> Arrow</td>
-			  </tr>
-			<table/>
-		</center>
+		<div class='parent'>
+			<div class='child float-left-child'>
+				<canvas id="msg" width='400' height='200' style="background-color: white; float: left;">
+				Your browser doesn't support the Canvas Element!
+			</canvas>
+			</div>
+			<div class='child float-left-child' style="float: left;">
+				<center>
+				<h1>Use the following keys to move the plane</h1>
+				<table border="1">
+					<tr>
+						<td>Elevate Up: <B>q</B> Key</td>
+						<td>Forward: <B>Up</B> Arrow</td>
+						<td>Elevate Down: <B>a</B> Key</td>
+					</tr>
+					<tr>
+						<td>Turn left: <B>Left</B> Arrow</td>
+						<td>Reverse: <B>Down</B> Arrow</td>
+						<td>turn right: <B>Right</B> Arrow</td>
+					</tr>
+					<table/>
+				</center>
+			</div>
+		</div>
+
+
+
+
 	</body>
 
 </html>
