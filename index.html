@@ -1,5 +1,10 @@
 <!doctype html>
-<html>
+<html >
+<style type="text/css">
+	body {
+		overflow:hidden;
+	}
+</style>
 	<head>
 		<title>Mauro Kart</title>
 		<script src="lib/WorldViewProjection.js"></script>
@@ -21,22 +26,11 @@
 				Your browser doesn't support the Canvas Element!
 			</canvas>
 			</div>
-			<div class='child float-left-child' style="float: left;">
-				<center>
-				<h1>Use the following keys to move the plane</h1>
-				<table border="1">
-					<tr>
-						<td>Elevate Up: <B>q</B> Key</td>
-						<td>Forward: <B>Up</B> Arrow</td>
-						<td>Elevate Down: <B>a</B> Key</td>
-					</tr>
-					<tr>
-						<td>Turn left: <B>Left</B> Arrow</td>
-						<td>Reverse: <B>Down</B> Arrow</td>
-						<td>turn right: <B>Right</B> Arrow</td>
-					</tr>
-					<table/>
-				</center>
+
+			<div class='child float-left-child'>
+				<canvas id="attitude" width='200' height='200' style="background-color: black; float: right	;">
+					Your browser doesn't support the Canvas Element!
+				</canvas>
 			</div>
 		</div>
 
