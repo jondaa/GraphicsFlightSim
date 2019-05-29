@@ -11,13 +11,13 @@ function worldViewProjection(carx, cary, carz, cardir, camx, camy, camz, aspectR
 // aspectRatio, a vertical Fov-y of 60 degrees, and with near and far planes repsectively at 0.1 and 1000.0
 
 	var T = [1,0,0,carx,
-				0,1,0,cary, 
-				0,0,1,carz, 
+				0,1,0,cary,
+				0,0,1,carz,
 				0,0,0,1];
 
 	var world =  utils.multiplyMatrices(T,currentPos.toMatrix4());
 
-	
+
 	var u = [0,1,0];
 	var a = [carx,cary,carz];
 	var c = [camx,camy,camz];
@@ -31,7 +31,7 @@ function worldViewProjection(carx, cary, carz, cardir, camx, camy, camz, aspectR
 	var view = utils.invertMatrix(viewinv);
 	var projection = [1/(aspectRatio*Math.tan(Math.PI/6)), 0, 0, 0,
 						0, 1/(Math.tan(Math.PI/6)), 0, 0,
-						0, 0, 1000.1/(0.1-1000), 2*0.1*1000/-999.9,
+						0, 0, 5000.1/(0.1-5000), 2*0.1*5000/-4999.9,
 						0, 0, -1, 0];
 
 	return [world, view, projection];
@@ -58,4 +58,3 @@ function updateWorld(rvx, rvy, rvz) {
 
 	return currentPos;
 }
-
