@@ -1,4 +1,4 @@
-function worldViewProjection(carx, cary, carz, cardir, camx, camy, camz, aspectRatio, currentPos) {
+function worldViewProjection(carx, cary, carz, camx, camy, camz, aspectRatio, currentPos) {
 // Computes the world, view and projection matrices for the game.
 
 // carx, cary and carz encodes the position of the car.
@@ -16,6 +16,7 @@ function worldViewProjection(carx, cary, carz, cardir, camx, camy, camz, aspectR
 				0,0,0,1];
 
 	var world =  utils.multiplyMatrices(T,currentPos.toMatrix4());
+
 
 
 	var u = [0,1,0];
